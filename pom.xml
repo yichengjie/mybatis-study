@@ -57,6 +57,14 @@
             <artifactId>mybatis</artifactId>
             <version>3.3.0</version>
         </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/ognl/ognl -->
+		<dependency>
+		    <groupId>ognl</groupId>
+		    <artifactId>ognl</artifactId>
+		    <version>3.1.15</version>
+		</dependency>
+        
 
 	<dependency>
 	    <groupId>mysql</groupId>

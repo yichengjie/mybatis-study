@@ -12,7 +12,6 @@ import com.yicj.mybatis.entity.Dept;
 
 public class DeptDaoTest {
 	static Logger logger = LoggerFactory.getLogger(DeptDaoTest.class) ;
-	
 	@Test
 	public void testFindAll() throws IOException {
 		DeptDAO dao = new DeptDAOImpl() ;
