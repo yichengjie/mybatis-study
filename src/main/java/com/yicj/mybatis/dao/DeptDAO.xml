@@ -9,4 +9,7 @@
     <select id="findAll" resultType="Dept">
         select * from dept
     </select>
+    <insert id="insertDept" parameterType="Dept">
+        insert into dept (deptname) value (#{deptname}) ;
+    </insert>
 </mapper>

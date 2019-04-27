@@ -29,4 +29,18 @@ public class DeptDAOImpl implements DeptDAO {
 		return depts;
 	}
 
+	public void insertDept(Dept dept) throws IOException {
+		SqlSession session = null ;
+		try {
+			session = SessionFactoryUtil.getSession() ;
+			DeptDAO mapper = session.getMapper(DeptDAO.class) ;
+			mapper.insertDept(dept);
+		} finally {
+			if (session !=null){
+				session.close();
+			}
+		}
+
+	}
+
 }

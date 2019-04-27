@@ -7,7 +7,7 @@ create table dept(
   deptname varchar(30)
 ) ; 
 
-insert into dept (deptname) values('研发部') ;
-insert into dept (deptname) values('合约部') ;
-insert into dept (deptname) values('小卖部') ;
+insert into dept (deptname) values('閮ㄩ棬1') ;
+insert into dept (deptname) values('閮ㄩ棬2') ;
+insert into dept (deptname) values('閮ㄩ棬3') ;
 

@@ -19,11 +19,12 @@ public class DeptDaoTest {
 		logger.info(depts.toString());
 		
 	}
-	
-	public static void main(String[] args) throws IOException {
+
+	@Test
+	public void testInsertDept() throws IOException {
 		DeptDAO dao = new DeptDAOImpl() ;
-		List<Dept> depts = dao.findAll() ;
-		logger.info(depts.toString());
+		Dept dept = new Dept("部门6") ;
+		dao.insertDept(dept);
 	}
-	
+
 }
