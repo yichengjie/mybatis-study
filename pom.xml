@@ -58,7 +58,6 @@
             <version>3.3.0</version>
         </dependency>
         
-        <!-- https://mvnrepository.com/artifact/ognl/ognl -->
 		<dependency>
 		    <groupId>ognl</groupId>
 		    <artifactId>ognl</artifactId>
@@ -74,6 +73,20 @@
   </dependencies>
   
   <build>
+    <resources>
+        <resource>
+           <directory>src/main/java</directory>
+           <includes>
+               <include>**/*.xml</include>
+           </includes>
+        </resource>
+        <resource>
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**</include>
+            </includes>
+        </resource>
+    </resources>
   	<plugins>
   		 <plugin>  
 			    <groupId>org.apache.maven.plugins</groupId>  

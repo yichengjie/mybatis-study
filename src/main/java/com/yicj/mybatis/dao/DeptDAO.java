@@ -5,5 +5,5 @@ import java.util.List;
 import com.yicj.mybatis.entity.Dept;
 
 public interface DeptDAO {
-    public List<Dept> findAll() throws IOException;//com.yicj.mybatis.dao.IDeptDAO
+    public List<Dept> findAll() throws IOException;
 }
