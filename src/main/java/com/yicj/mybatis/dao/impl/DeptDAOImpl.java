@@ -35,6 +35,7 @@ public class DeptDAOImpl implements DeptDAO {
 			session = SessionFactoryUtil.getSession() ;
 			DeptDAO mapper = session.getMapper(DeptDAO.class) ;
 			mapper.insertDept(dept);
+			session.commit();
 		} finally {
 			if (session !=null){
 				session.close();
@@ -42,5 +43,19 @@ public class DeptDAOImpl implements DeptDAO {
 		}
 
 	}
-
+	
+	
+	public List<Object> findAll2() throws IOException {
+		SqlSession session = null ;
+		List<Dept> depts = null ;
+		try {
+			session = SessionFactoryUtil.getSession() ;
+			List<Object> allUsers = session.selectList("com.yicj.mybatis.dao.DeptDAO.findAll");
+			return allUsers ;
+		}finally {
+			if(session!=null) {
+				session.close(); 
+			}
+		}
+	}
 }

@@ -23,8 +23,15 @@ public class DeptDaoTest {
 	@Test
 	public void testInsertDept() throws IOException {
 		DeptDAO dao = new DeptDAOImpl() ;
-		Dept dept = new Dept("部门6") ;
+		Dept dept = new Dept("部门4") ;
 		dao.insertDept(dept);
 	}
+	
+	@Test
+	public void testFindAll2() throws IOException {
+		DeptDAO dao = new DeptDAOImpl() ;
+		List<Object> depts = dao.findAll2();
+		logger.info(depts.toString());
+	} 
 
 }

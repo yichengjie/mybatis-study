@@ -3,7 +3,6 @@
   <groupId>com.yicj.demo</groupId>
   <artifactId>mybatis-study</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
   <dependencies>
 	<dependency>
 	    <groupId>junit</groupId>
@@ -64,19 +63,19 @@
 		    <version>3.1.15</version>
 		</dependency>
         
-      <!--低版本的mysql驱动
+      <!--低版本的mysql驱动-->
 	  <dependency>
 	     <groupId>mysql</groupId>
 	     <artifactId>mysql-connector-java</artifactId>
 	     <version>5.1.35</version>
-	  </dependency>-->
+	  </dependency>
 
-     <!--8.x版本的mysql驱动-->
+     <!--8.x版本的mysql驱动
      <dependency>
        <groupId>mysql</groupId>
        <artifactId>mysql-connector-java</artifactId>
        <version>8.0.13</version>
-     </dependency>
+     </dependency>-->
 
 
 
