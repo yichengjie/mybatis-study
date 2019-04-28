@@ -1,4 +1,4 @@
-package com.yicj.mybatis.dao.impl;
+package com.yicj.mybatis.mapper.impl;
 
 import java.io.IOException;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.yicj.mybatis.dao.DeptDAO;
 import com.yicj.mybatis.entity.Dept;
+import com.yicj.mybatis.mapper.DeptDAO;
 import com.yicj.mybatis.util.SessionFactoryUtil;
 
 public class DeptDAOImpl implements DeptDAO {

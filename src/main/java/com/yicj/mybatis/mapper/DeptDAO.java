@@ -1,4 +1,4 @@
-package com.yicj.mybatis.dao;
+package com.yicj.mybatis.mapper;
 
 import java.io.IOException;
 import java.util.List;

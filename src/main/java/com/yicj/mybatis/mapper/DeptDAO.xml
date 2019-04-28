@@ -5,7 +5,7 @@
 <!--映射文件的根节点
   namespace
 -->
-<mapper namespace="com.yicj.mybatis.dao.DeptDAO">
+<mapper namespace="com.yicj.mybatis.mapper.DeptDAO">
     <select id="findAll" resultType="Dept">
         select * from dept
     </select>

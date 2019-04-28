@@ -7,8 +7,9 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.yicj.mybatis.dao.impl.DeptDAOImpl;
 import com.yicj.mybatis.entity.Dept;
+import com.yicj.mybatis.mapper.DeptDAO;
+import com.yicj.mybatis.mapper.impl.DeptDAOImpl;
 
 public class DeptDaoTest {
 	static Logger logger = LoggerFactory.getLogger(DeptDaoTest.class) ;
