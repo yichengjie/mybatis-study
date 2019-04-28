@@ -2,7 +2,6 @@ package com.yicj.mybatis.plugin;
 
 import java.sql.SQLException;
 import java.util.Properties;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;
@@ -24,11 +23,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Intercepts(@Signature(type = Executor.class, method = "query",
-args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class}))
+	args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class}))
 public class MybatisSqlInterceptor implements Interceptor {
 	Logger logger = LoggerFactory.getLogger(MybatisSqlInterceptor.class) ;
 	@Override
 	public Object intercept(Invocation invocation) throws Throwable {
+		String interceptMethod = invocation.getMethod().getName();
+		logger.info("interceptMethod : " + interceptMethod);
 		// 获取sql
 		String sql = getSqlByInvocation(invocation);
 		if (StringUtils.isBlank(sql)) {
