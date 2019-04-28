@@ -10,6 +10,16 @@
         select * from dept
     </select>
     <insert id="insertDept" parameterType="Dept">
+        <!--selectKey标签实现主键返回-->
+        <!--keyColumn:主键对应表中的哪一列-->
+        <!--keyProperty:主键对应的pojo中的哪一个属性-->
+        <!--order:设置在执行insert语句前执行查询id的sql，还是在执行insert
+            语句之后执行查询id的sql
+        -->
+        <selectKey keyColumn="deptno" keyProperty="deptno"
+                   order="AFTER" resultType="int">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
         insert into dept (deptname) value (#{deptname}) ;
     </insert>
     

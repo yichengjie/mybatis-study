@@ -26,8 +26,9 @@ public class DeptDaoTest {
 	@Test
 	public void testInsertDept() throws IOException {
 		DeptService service = new DeptService() ;
-		Dept dept = new Dept("部门4") ;
+		Dept dept = new Dept("部门5") ;
 		service.insertDept(dept);
+		System.out.println(dept);
 	}
 	
 	@Test
