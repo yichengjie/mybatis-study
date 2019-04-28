@@ -29,7 +29,7 @@
         </environment>
     </environments>
     <mappers>
-    	<!-- <mapper resource="com/yicj/mybatis/mapper/DeptDAO.xml"/> -->
+    	<!-- <mapper resource="com/yicj/mybatis/mapper/DeptMapper.xml"/> -->
         <package name="com.yicj.mybatis.mapper"></package>
     </mappers>
 </configuration>

@@ -1,4 +1,4 @@
-package com.yicj.mybatis.mapper.impl;
+package com.yicj.mybatis.service;
 
 import java.io.IOException;
 import java.util.List;
@@ -8,18 +8,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.yicj.mybatis.entity.Dept;
-import com.yicj.mybatis.mapper.DeptDAO;
+import com.yicj.mybatis.mapper.DeptMapper;
 import com.yicj.mybatis.util.SessionFactoryUtil;
 
-public class DeptDAOImpl implements DeptDAO {
-	Logger logger = LoggerFactory.getLogger(DeptDAOImpl.class) ;
+public class DeptService{
+	Logger logger = LoggerFactory.getLogger(DeptService.class) ;
 	
 	public List<Dept> findAll() throws IOException {
 		SqlSession session = null ;
 		List<Dept> depts = null ;
 		try {
 			session = SessionFactoryUtil.getSession() ;
-			DeptDAO mapper = session.getMapper(DeptDAO.class) ;
+			DeptMapper mapper = session.getMapper(DeptMapper.class) ;
 			depts = mapper.findAll() ;
 		}finally {
 			if(session!=null) {
@@ -33,7 +33,7 @@ public class DeptDAOImpl implements DeptDAO {
 		SqlSession session = null ;
 		try {
 			session = SessionFactoryUtil.getSession() ;
-			DeptDAO mapper = session.getMapper(DeptDAO.class) ;
+			DeptMapper mapper = session.getMapper(DeptMapper.class) ;
 			mapper.insertDept(dept);
 			session.commit();
 		} finally {
@@ -47,11 +47,10 @@ public class DeptDAOImpl implements DeptDAO {
 	
 	public List<Object> findAll2() throws IOException {
 		SqlSession session = null ;
-		List<Dept> depts = null ;
 		try {
 			session = SessionFactoryUtil.getSession() ;
-			List<Object> allUsers = session.selectList("com.yicj.mybatis.dao.DeptDAO.findAll");
-			return allUsers ;
+			List<Object> depts = session.selectList("com.yicj.mybatis.mapper.DeptMapper.findAll");
+			return depts ;
 		}finally {
 			if(session!=null) {
 				session.close(); 

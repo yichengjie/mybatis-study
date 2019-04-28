@@ -8,30 +8,31 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.yicj.mybatis.entity.Dept;
-import com.yicj.mybatis.mapper.DeptDAO;
-import com.yicj.mybatis.mapper.impl.DeptDAOImpl;
+import com.yicj.mybatis.mapper.DeptMapper;
+import com.yicj.mybatis.service.DeptService;
 
 public class DeptDaoTest {
 	static Logger logger = LoggerFactory.getLogger(DeptDaoTest.class) ;
+	
 	@Test
 	public void testFindAll() throws IOException {
-		DeptDAO dao = new DeptDAOImpl() ;
-		List<Dept> depts = dao.findAll() ;
+		DeptService service = new DeptService() ;
+		List<Dept> depts = service.findAll() ;
 		logger.info(depts.toString());
 		
 	}
 
 	@Test
 	public void testInsertDept() throws IOException {
-		DeptDAO dao = new DeptDAOImpl() ;
+		DeptService service = new DeptService() ;
 		Dept dept = new Dept("部门4") ;
-		dao.insertDept(dept);
+		service.insertDept(dept);
 	}
 	
 	@Test
 	public void testFindAll2() throws IOException {
-		DeptDAO dao = new DeptDAOImpl() ;
-		List<Object> depts = dao.findAll2();
+		DeptService service = new DeptService() ;
+		List<Object> depts = service.findAll2();
 		logger.info(depts.toString());
 	} 
 
