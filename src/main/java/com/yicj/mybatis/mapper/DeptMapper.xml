@@ -16,7 +16,7 @@
     <select id="findByIds" parameterType="com.yicj.mybatis.vo.QueryVO" resultType="Dept">
     	select * from dept 
     	<where>
-    		<if test="depts != null ">
+    		<if test="depts != null and depts.size() > 0">
 	    		<foreach collection="depts" index = "index" item = "item" open="deptno in (" close=")" separator=",">
 	    			#{item.deptno}
 	    		</foreach>

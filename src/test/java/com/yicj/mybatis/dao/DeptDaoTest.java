@@ -45,7 +45,7 @@ public class DeptDaoTest {
 		depts.add(new Dept(2)) ;
 		depts.add(new Dept(3)) ;
 		QueryVO vo = new QueryVO() ;
-		vo.setDepts(null); ;
+		vo.setDepts(depts); ;
 		DeptService service = new DeptService() ;
 		List<Dept> retList = service.findByIds(vo);
 		System.out.println(retList);
