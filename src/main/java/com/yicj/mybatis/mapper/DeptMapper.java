@@ -10,4 +10,7 @@ public interface DeptMapper {
     public void insertDept(Dept dept)throws IOException ;
     public List<Object> findAll2() throws IOException ;
     public List<Dept> findByIds(QueryVO vo) ;
+    public List<Dept> queryDeptByName(String deptname) ;
+    public List<Dept> queryDeptByName2(String deptname) ;
+    public List<Dept> queryDeptByName3(String deptname) ;
 }

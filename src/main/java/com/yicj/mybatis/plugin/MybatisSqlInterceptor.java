@@ -32,12 +32,8 @@ public class MybatisSqlInterceptor implements Interceptor {
 		logger.info("interceptMethod : " + interceptMethod);
 		// 获取sql
 		String sql = getSqlByInvocation(invocation);
-		if (StringUtils.isBlank(sql)) {
-			return invocation.proceed();
-		}
 		// sql交由处理类处理 对sql语句进行处理 此处是范例 不做任何处理
 		String sql2Reset = sql;
-		logger.info("new sql is : " + sql2Reset);
 		// 包装sql后，重置到invocation中
 		resetSql2Invocation(invocation, sql2Reset);
 		// 返回，继续执行

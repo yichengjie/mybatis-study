@@ -23,4 +23,31 @@
     		</if>
     	</where>
     </select>
+
+    <select id="queryDeptByName" parameterType="string" resultType="Dept">
+        select * from dept
+        <where>
+            <if test="value != null">
+                deptname like '%${value}%'
+            </if>
+        </where>
+    </select>
+
+    <select id="queryDeptByName2" parameterType="string" resultType="Dept">
+        select * from dept
+        <where>
+            <if test="value != null">
+                deptname like "%"#{value}"%"
+            </if>
+        </where>
+    </select>
+
+    <select id="queryDeptByName3" parameterType="string" resultType="Dept">
+        select * from dept
+        <where>
+            <if test="value != null">
+                deptname like concat('%',#{value},'%')
+            </if>
+        </where>
+    </select>
 </mapper>

@@ -21,7 +21,6 @@ public class DeptDaoTest {
 		DeptService service = new DeptService() ;
 		List<Dept> depts = service.findAll() ;
 		logger.info(depts.toString());
-		
 	}
 
 	@Test
@@ -50,6 +49,31 @@ public class DeptDaoTest {
 		List<Dept> retList = service.findByIds(vo);
 		System.out.println(retList);
 	}
+
+	@Test
+	public void queryDeptByName() throws IOException {
+		String deptname = "部门" ;
+		DeptService service = new DeptService() ;
+		List<Dept> list = service.queryDeptByName(deptname) ;
+		System.out.println(list);
+	}
+
+	@Test
+	public void queryDeptByName2() throws IOException {
+		String deptname = "部门" ;
+		DeptService service = new DeptService() ;
+		List<Dept> list = service.queryDeptByName2(deptname) ;
+		System.out.println(list);
+	}
+
+	@Test
+	public void queryDeptByName3() throws IOException {
+		String deptname = "部门" ;
+		DeptService service = new DeptService() ;
+		List<Dept> list = service.queryDeptByName3(deptname) ;
+		System.out.println(list);
+	}
+
 	
 	
 

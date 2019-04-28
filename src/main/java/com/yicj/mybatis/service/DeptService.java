@@ -71,5 +71,44 @@ public class DeptService{
 			}
 		}
 	}
+
+	public List<Dept> queryDeptByName(String deptname) throws IOException {
+		SqlSession session = null ;
+		try {
+			session = SessionFactoryUtil.getSession() ;
+			DeptMapper mapper = session.getMapper(DeptMapper.class) ;
+			return mapper.queryDeptByName(deptname) ;
+		}finally {
+			if(session!=null) {
+				session.close();
+			}
+		}
+	}
+	public List<Dept> queryDeptByName2(String deptname) throws IOException {
+		SqlSession session = null ;
+		try {
+			session = SessionFactoryUtil.getSession() ;
+			DeptMapper mapper = session.getMapper(DeptMapper.class) ;
+			return mapper.queryDeptByName2(deptname) ;
+		}finally {
+			if(session!=null) {
+				session.close();
+			}
+		}
+	}
+	public List<Dept> queryDeptByName3(String deptname) throws IOException {
+		SqlSession session = null ;
+		try {
+			session = SessionFactoryUtil.getSession() ;
+			DeptMapper mapper = session.getMapper(DeptMapper.class) ;
+			return mapper.queryDeptByName3(deptname) ;
+		}finally {
+			if(session!=null) {
+				session.close();
+			}
+		}
+	}
+
+
 	
 }
