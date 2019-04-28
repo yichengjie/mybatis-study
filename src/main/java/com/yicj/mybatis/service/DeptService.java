@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import com.yicj.mybatis.entity.Dept;
 import com.yicj.mybatis.mapper.DeptMapper;
 import com.yicj.mybatis.util.SessionFactoryUtil;
+import com.yicj.mybatis.vo.QueryVO;
 
 public class DeptService{
 	Logger logger = LoggerFactory.getLogger(DeptService.class) ;
@@ -57,4 +58,18 @@ public class DeptService{
 			}
 		}
 	}
+	
+	public List<Dept> findByIds(QueryVO vo) throws IOException{
+		SqlSession session = null ;
+		try {
+			session = SessionFactoryUtil.getSession() ;
+			DeptMapper mapper = session.getMapper(DeptMapper.class) ;
+			return mapper.findByIds(vo) ;
+		}finally {
+			if(session!=null) {
+				session.close(); 
+			}
+		}
+	}
+	
 }

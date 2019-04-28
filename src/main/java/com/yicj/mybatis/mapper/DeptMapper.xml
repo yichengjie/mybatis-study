@@ -12,4 +12,15 @@
     <insert id="insertDept" parameterType="Dept">
         insert into dept (deptname) value (#{deptname}) ;
     </insert>
+    
+    <select id="findByIds" parameterType="com.yicj.mybatis.vo.QueryVO" resultType="Dept">
+    	select * from dept 
+    	<where>
+    		<if test="depts != null ">
+	    		<foreach collection="depts" index = "index" item = "item" open="deptno in (" close=")" separator=",">
+	    			#{item.deptno}
+	    		</foreach>
+    		</if>
+    	</where>
+    </select>
 </mapper>

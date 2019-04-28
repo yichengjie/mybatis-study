@@ -1,6 +1,7 @@
 package com.yicj.mybatis.dao;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
@@ -10,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import com.yicj.mybatis.entity.Dept;
 import com.yicj.mybatis.mapper.DeptMapper;
 import com.yicj.mybatis.service.DeptService;
+import com.yicj.mybatis.vo.QueryVO;
 
 public class DeptDaoTest {
 	static Logger logger = LoggerFactory.getLogger(DeptDaoTest.class) ;
@@ -35,5 +37,20 @@ public class DeptDaoTest {
 		List<Object> depts = service.findAll2();
 		logger.info(depts.toString());
 	} 
+	
+	@Test
+	public void testFindByIds() throws IOException {
+		List<Dept> depts = new ArrayList<Dept>() ;
+		depts.add(new Dept(1)) ;
+		depts.add(new Dept(2)) ;
+		depts.add(new Dept(3)) ;
+		QueryVO vo = new QueryVO() ;
+		vo.setDepts(null); ;
+		DeptService service = new DeptService() ;
+		List<Dept> retList = service.findByIds(vo);
+		System.out.println(retList);
+	}
+	
+	
 
 }

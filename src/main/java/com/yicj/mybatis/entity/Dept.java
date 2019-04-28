@@ -6,6 +6,17 @@ import java.io.Serializable;
 public class Dept implements Serializable {
     private Integer deptno;
     private String deptname;
+    
+    public Dept() {
+    }
+    
+    public Dept(Integer deptno) {
+    	this.deptno = deptno ;
+    }
+    
+    public Dept(String deptname) {
+        this.deptname = deptname;
+    }
 
     public Integer getDeptno() {
         return deptno;
@@ -27,15 +38,6 @@ public class Dept implements Serializable {
         this.deptno = deptno;
         this.deptname = deptname;
     }
-
-    public Dept(String deptname) {
-        this.deptname = deptname;
-    }
-
-    public Dept() {
-    }
-
-
 
     @Override
     public String toString() {
