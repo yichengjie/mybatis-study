@@ -1,17 +1,12 @@
 package com.yicj.mybatis.service;
 
 import java.io.IOException;
-import java.util.List;
-
 import org.apache.ibatis.session.SqlSession;
-
 import com.yicj.mybatis.entity.Classes;
-import com.yicj.mybatis.entity.Dept;
 import com.yicj.mybatis.mapper.ClassesMapper;
-import com.yicj.mybatis.mapper.DeptMapper;
 import com.yicj.mybatis.util.SessionFactoryUtil;
 
-public class ClassesService {
+public class ClassesService  {
 	
 	public Classes findClassesById(Integer cid) throws IOException {
 		SqlSession session = null ;
