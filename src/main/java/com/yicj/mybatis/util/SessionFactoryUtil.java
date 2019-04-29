@@ -21,6 +21,12 @@ public class SessionFactoryUtil {
         }
         return sessionFactory.openSession();
     }
+    
+    public static void closeSession(SqlSession session) {
+    	if(session != null) {
+    		session.close();
+    	}
+    }
 
 
 }

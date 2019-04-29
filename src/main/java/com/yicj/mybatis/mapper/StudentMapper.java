@@ -1,5 +1,8 @@
 package com.yicj.mybatis.mapper;
 
-public class StudentMapper {
+import com.yicj.mybatis.entity.Student;
 
+public interface StudentMapper {
+	
+	Student findStudentById(Integer sid) ;
 }

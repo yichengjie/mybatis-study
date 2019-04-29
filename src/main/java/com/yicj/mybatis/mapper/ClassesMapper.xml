@@ -7,7 +7,7 @@
 -->
 <mapper namespace="com.yicj.mybatis.mapper.ClassesMapper">
 	
-	<resultMap type="Classes"  id="getClassesByIdMap">
+	<resultMap type="Classes"  id="findClassesByIdMap">
 		<id column="cid" property="cid"/>
 		<result column="cname" property="cname"/>
 		<collection property="students" ofType="Student">
@@ -16,7 +16,7 @@
 		</collection>
 	</resultMap>
 	
-	<select id="findClassesById" resultMap="getClassesByIdMap">
+	<select id="findClassesById" resultMap="findClassesByIdMap">
 		select * 
 		from classes c , student s 
 		where s.cid = c.cid 

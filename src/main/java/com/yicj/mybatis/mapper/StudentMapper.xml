@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件的根节点
+  namespace
+-->
+<mapper namespace="com.yicj.mybatis.mapper.StudentMapper">
+	
+	<resultMap type="Student" id="findStudentByIdMap">
+		<id column="sid" property="sid" javaType="Integer" />
+		<result column="sname" property=""/>
+		<association property="classes" javaType="Classes">
+			<id column="cid" property="cid"/>
+			<result column="cname" property="cname"/>
+		</association>
+	</resultMap>
+	
+	<select id="findStudentById" resultMap="findStudentByIdMap">
+		select * from student s , classes c
+		where s.cid = c.cid 
+		and s.sid = #{sid}
+	</select>
+	
+	
+
+</mapper>
