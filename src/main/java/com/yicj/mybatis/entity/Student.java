@@ -5,6 +5,8 @@ public class Student {
 	private Integer sid ;
 	private String sname ;
 	private Classes classes ;
+	
+	
 	public Integer getSid() {
 		return sid;
 	}

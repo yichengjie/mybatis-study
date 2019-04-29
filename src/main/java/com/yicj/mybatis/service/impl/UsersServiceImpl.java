@@ -19,5 +19,4 @@ public class UsersServiceImpl implements UsersService{
 	public List<Groups> findGroupsListByUid(Integer uid) throws IOException {
 		return mapper.findGroupsListByUid(uid);
 	}
-
 }

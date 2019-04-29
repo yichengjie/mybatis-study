@@ -9,7 +9,7 @@
 	
 	<resultMap type="Student" id="findStudentByIdMap">
 		<id column="sid" property="sid" javaType="Integer" />
-		<result column="sname" property=""/>
+		<result column="sname" property="sname"/>
 		<association property="classes" javaType="Classes">
 			<id column="cid" property="cid"/>
 			<result column="cname" property="cname"/>

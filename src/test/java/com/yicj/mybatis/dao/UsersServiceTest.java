@@ -19,7 +19,6 @@ public class UsersServiceTest {
 	
 	@Test
 	public void findGroupsListByUid() throws IOException {
-		org.mybatis.spring.SqlSessionFactoryBean t ;
 		Integer uid = 1 ;
 		List<Groups> groups = service.findGroupsListByUid(uid) ;
 		System.out.println(groups);
