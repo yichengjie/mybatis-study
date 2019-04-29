@@ -13,7 +13,7 @@ public class GroupsServiceTest {
 	public void testFindUsersById() throws IOException {
 		Integer gid = 3 ;
 		GroupsService service = new GroupsService() ;
-		List<Groups> groups = service.findUsersById(gid);
+		List<Groups> groups = service.findUsersListByGid(gid);
 		System.out.println(groups);
 	}
 	

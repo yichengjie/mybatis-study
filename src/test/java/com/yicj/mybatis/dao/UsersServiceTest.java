@@ -14,7 +14,7 @@ public class UsersServiceTest {
 	public void testFindGroupsById() throws IOException {
 		Integer uid = 1 ;
 		UsersService service = new UsersService() ;
-		List<Groups> groups = service.findGroupsById(uid) ;
+		List<Groups> groups = service.findGroupsListByUid(uid) ;
 		System.out.println(groups);
 	}
 	

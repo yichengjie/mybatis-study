@@ -7,7 +7,7 @@
 -->
 <mapper namespace="com.yicj.mybatis.mapper.GroupsMapper">
 
-	<resultMap type="Users" id="findUsersByIdMap">
+	<resultMap type="Users" id="findUsersListByGidMap">
 		<id column="uid" property="uid"/>
 		<result column="uname" property="uname"/>
 		<collection property="groups" ofType="Groups">
@@ -17,7 +17,7 @@
 	</resultMap>
 
 	<!-- 给定一个组id，查看该组下所有的用户 -->
-	<select id="findUsersById" resultMap="findUsersByIdMap">
+	<select id="findUsersListByGid" resultMap="findUsersListByGidMap">
 		SELECT *
 		FROM users_groups ug, users u
 		WHERE ug.user_id = u.uid

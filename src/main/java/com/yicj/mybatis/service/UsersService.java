@@ -10,12 +10,12 @@ import com.yicj.mybatis.util.SessionFactoryUtil;
 
 public class UsersService {
 	
-	public List<Groups> findGroupsById(Integer uid) throws IOException {
+	public List<Groups> findGroupsListByUid(Integer uid) throws IOException {
 		SqlSession session = null ;
 		try {
 			session = SessionFactoryUtil.getSession();
 			UsersMapper mapper = session.getMapper(UsersMapper.class) ;
-			return mapper.findGroupsById(uid);
+			return mapper.findGroupsListByUid(uid);
 		} finally {
 			SessionFactoryUtil.closeSession(session);
 		}

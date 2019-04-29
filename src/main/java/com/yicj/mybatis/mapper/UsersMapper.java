@@ -6,5 +6,5 @@ import com.yicj.mybatis.entity.Groups;
 
 public interface UsersMapper {
 	
-	List<Groups> findGroupsById(Integer uid) ;
+	List<Groups> findGroupsListByUid(Integer uid) ;
 }
