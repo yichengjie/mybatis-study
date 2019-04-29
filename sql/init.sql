@@ -39,6 +39,10 @@ CREATE TABLE `mybatis_db`.`users_groups`(     `user_id` INT ,     `group_id` INT
 INSERT INTO `mybatis_db`.`groups`(`gid`,`gname`) VALUES ( '1','小组1');
 INSERT INTO `mybatis_db`.`groups`(`gid`,`gname`) VALUES ( '2','小组2');
 INSERT INTO `mybatis_db`.`groups`(`gid`,`gname`) VALUES ( '3','小组3');
+INSERT INTO `mybatis_db`.`groups`(`gid`,`gname`) VALUES ( '4','小组4');
+INSERT INTO `mybatis_db`.`groups`(`gid`,`gname`) VALUES ( '5','小组5');
+INSERT INTO `mybatis_db`.`groups`(`gid`,`gname`) VALUES ( '6','小组6');
+INSERT INTO `mybatis_db`.`groups`(`gid`,`gname`) VALUES ( '7','小组7');
 
 INSERT INTO `mybatis_db`.`users`(`uid`,`uname`) VALUES ( '1','用户1');
 INSERT INTO `mybatis_db`.`users`(`uid`,`uname`) VALUES ( '2','用户2');

@@ -11,8 +11,7 @@
 		<id column="uid" property="uid"/>
 		<result column="uname" property="uname"/>
 		<collection property="groups" ofType="Groups">
-			<id column="gid" property="gid"/>
-			<result column="gname" property="gname"/>
+			<id column="group_id" property="gid"/>
 		</collection>
 	</resultMap>
 

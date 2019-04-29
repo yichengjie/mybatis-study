@@ -10,7 +10,7 @@ public class GroupsServiceTest {
 	
 	
 	@Test
-	public void testFindUsersById() throws IOException {
+	public void findUsersListByGid() throws IOException {
 		Integer gid = 3 ;
 		GroupsService service = new GroupsService() ;
 		List<Groups> groups = service.findUsersListByGid(gid);
