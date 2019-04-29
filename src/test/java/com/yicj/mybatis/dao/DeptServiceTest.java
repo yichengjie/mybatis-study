@@ -13,8 +13,8 @@ import com.yicj.mybatis.mapper.DeptMapper;
 import com.yicj.mybatis.service.DeptService;
 import com.yicj.mybatis.vo.QueryVO;
 
-public class DeptDaoTest {
-	static Logger logger = LoggerFactory.getLogger(DeptDaoTest.class) ;
+public class DeptServiceTest {
+	static Logger logger = LoggerFactory.getLogger(DeptServiceTest.class) ;
 	
 	@Test
 	public void testFindAll() throws IOException {

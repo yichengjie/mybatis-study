@@ -70,19 +70,19 @@
 		    <version>3.1.15</version>
 		</dependency>
         
-      <!--低版本的mysql驱动
+      <!--低版本的mysql驱动-->
 	  <dependency>
 	     <groupId>mysql</groupId>
 	     <artifactId>mysql-connector-java</artifactId>
 	     <version>5.1.35</version>
-	  </dependency>-->
+	  </dependency>
 
-     <!--8.x版本的mysql驱动-->
+     <!--8.x版本的mysql驱动
      <dependency>
        <groupId>mysql</groupId>
        <artifactId>mysql-connector-java</artifactId>
        <version>8.0.13</version>
-     </dependency>
+     </dependency>-->
      
 	<dependency>
 	    <groupId>org.apache.commons</groupId>
