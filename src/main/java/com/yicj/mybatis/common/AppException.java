@@ -2,6 +2,8 @@ package com.yicj.mybatis.common;
 
 public class AppException extends RuntimeException {
 	
+	private static final long serialVersionUID = 1L;
+
 	public AppException(Throwable e) {
 		super(e) ;
 	}

@@ -2,7 +2,6 @@ package com.yicj.mybatis.plugin;
 
 import java.sql.SQLException;
 import java.util.Properties;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;

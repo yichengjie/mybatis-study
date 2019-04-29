@@ -1,9 +1,7 @@
 package com.yicj.mybatis.entity;
 
-import java.io.Serializable;
 
-
-public class Dept implements Serializable {
+public class Dept  {
     private Integer deptno;
     private String deptname;
     
