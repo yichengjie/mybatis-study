@@ -8,9 +8,17 @@
     	<package name="com.yicj.mybatis.entity"></package>
     </typeAliases>
     
-    <!-- <plugins>
-   		 <plugin interceptor="com.yicj.mybatis.plugin.PageInterceptor"></plugin>
-   	</plugins> -->
+    <plugins>
+   		<!--  <plugin interceptor="com.yicj.mybatis.plugin.PageInterceptor"></plugin> -->
+   		<plugin interceptor="com.yicj.mybatis.interceptor.Myinterceptor1">
+   			<property name="shuxing1" value="value1"/>
+            <property name="shuxing2" value="value11"/>
+   		</plugin>
+   		<plugin interceptor="com.yicj.mybatis.interceptor.Myinterceptor2">
+   			<property name="shuxing1" value="value2"/>
+            <property name="shuxing2" value="value22"/>
+   		</plugin>
+   	</plugins>
     
     <mappers>
         <package name="com.yicj.mybatis.mapper"></package>
