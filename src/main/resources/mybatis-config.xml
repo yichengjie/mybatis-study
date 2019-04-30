@@ -8,9 +8,9 @@
     	<package name="com.yicj.mybatis.entity"></package>
     </typeAliases>
     
-    <plugins>
-   		 <plugin interceptor="com.yicj.mybatis.plugin.MybatisSqlInterceptor"></plugin>
-   	</plugins>
+    <!-- <plugins>
+   		 <plugin interceptor="com.yicj.mybatis.plugin.PageInterceptor"></plugin>
+   	</plugins> -->
     
     <mappers>
         <package name="com.yicj.mybatis.mapper"></package>
