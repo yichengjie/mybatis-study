@@ -1,4 +1,4 @@
-package com.yicj.mybatis.plugin;
+package com.yicj.mybatis.interceptor;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;

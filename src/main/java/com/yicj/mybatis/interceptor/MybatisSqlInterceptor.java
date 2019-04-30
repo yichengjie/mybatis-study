@@ -1,4 +1,4 @@
-package com.yicj.mybatis.plugin;
+package com.yicj.mybatis.interceptor;
 
 import java.sql.SQLException;
 import java.util.Properties;
